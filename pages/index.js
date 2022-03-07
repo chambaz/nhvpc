@@ -72,7 +72,7 @@ export default function Home() {
             backgroundImage: 'url(/img/masthead.jpg)',
           }}></div>
 
-        <div className="bg-white relative z-10 px-4 content">
+        <div className="bg-white relative z-10 px-4 content pb-5">
           <div className="max-w-6xl mx-auto pt-16 leading-loose text-gray-500 text-center">
             <div className="max-w-4xl mx-auto mb-36 space-y-8">
               <h2 className="text-4xl font-bold font-serif my-6 text-black">
