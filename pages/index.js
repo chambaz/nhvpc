@@ -8,21 +8,21 @@ export default function Home() {
   const nav = useRef()
   const [navClasses, setNavClasses] = useState('')
 
+  const navStyle = () => {
+    const breakpoint = window.outerWidth >= 768 ? 670 : 365
+    console.log(document.documentElement.scrollTop)
+    if (document.documentElement.scrollTop > breakpoint) {
+      setNavClasses(
+        'bg-white bg-opacity-90 text-black border-b-2 border-gray-100 shadow-sm'
+      )
+    } else {
+      setNavClasses('text-white')
+    }
+  }
+
   useEffect(() => {
-    window.addEventListener(
-      'scroll',
-      throttle(() => {
-        const breakpoint = window.outerWidth >= 768 ? 670 : 365
-        console.log(document.documentElement.scrollTop)
-        if (document.documentElement.scrollTop > breakpoint) {
-          setNavClasses(
-            'bg-white bg-opacity-90 text-black border-b-2 border-gray-100 shadow-sm'
-          )
-        } else {
-          setNavClasses('text-white')
-        }
-      }, 100)
-    )
+    window.addEventListener('scroll', throttle(navStyle, 100))
+    navStyle()
   }, [])
   return (
     <div>
@@ -42,7 +42,7 @@ export default function Home() {
       <nav
         ref={nav}
         className={`fixed z-20 top-10 w-full transition ${navClasses}`}>
-        <div className="flex w-full max-w-6xl mx-auto items-center p-4 font-bold text-lg">
+        <div className="flex w-full max-w-6xl mx-auto items-center p-4 md:px-0 font-bold text-lg">
           <a href="#" className="flex items-center text-3xl font-serif">
             <Image src="/img/logo.png" width="50" height="50" />
             <span className="ml-2">NHVPC</span>
@@ -50,16 +50,16 @@ export default function Home() {
 
           <ul className="ml-auto hidden md:flex">
             <li className="mx-6">
-              <a href="">About</a>
+              <a href="#about">About</a>
             </li>
             <li className="mx-6">
-              <a href="">Roadmap</a>
+              <a href="#benefits">Benefits</a>
             </li>
             <li className="mx-6">
-              <a href="">Partners</a>
+              <a href="#partners">Partners</a>
             </li>
             <li className="mx-6 mr-0">
-              <a href="">🍕 Buy a slice</a>
+              <a href="#buyaslice">🍕 Buy a slice</a>
             </li>
           </ul>
         </div>
@@ -78,33 +78,29 @@ export default function Home() {
               <h2 className="text-4xl font-bold font-serif my-6 text-black">
                 About NHVPC
               </h2>
-              <p>
-                Nostrud veniam excepteur irure excepteur consectetur aliquip ut
-                velit nostrud in dolor magna ad pariatur. Veniam amet veniam
-                sint fugiat veniam eu dolor ut velit. Culpa est ea Lorem
-                adipisicing consectetur labore ut tempor. Dolore pariatur magna
-                minim voluptate tempor cillum laborum qui tempor. Cillum
-                adipisicing sint velit magna proident voluptate ullamco ea
-                commodo. Consequat aliquip non anim ex laborum nulla dolor
-                eiusmod labore adipisicing excepteur et laborum quis. Dolore
-                ullamco enim deserunt aliquip nulla enim magna.
+              <p className="max-w-2xl mx-auto">
+                New Haven Pizza Club is a members-only club for residents of New
+                Haven, CT. 4338 unique NFT's will be available to mint for
+                access to the club. Members will benefit from exclusive deals
+                with our partners, local businesses, and a tight-knit community
+                New Haven's best.
               </p>
             </div>
 
             <div className="mb-36 space-y-16">
               <h2 className="text-4xl font-bold font-serif my-6 text-black">
-                The Roadmap
+                Member Benefits
               </h2>
 
               <div className="space-y-36">
-                <div className="flex flex-col md:flex-row text-left">
+                <div className="flex flex-col items-center md:flex-row text-left">
                   <img
-                    src="https://via.placeholder.com/600x400"
+                    src="/img/sample.jpg"
                     alt=""
                     className="w-full md:w-1/2"
                   />
                   <div className="space-y-4 md:ml-10 text-center md:text-left">
-                    <h3 className="text-2xl mt-4 font-bold font-serif text-black">
+                    <h3 className="text-2xl mt-6 md:mt-0 font-bold font-serif text-black">
                       Mint 4338 unique NFTs
                     </h3>
                     <p>
@@ -117,14 +113,14 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row-reverse text-left">
+                <div className="flex flex-col items-center md:flex-row-reverse text-left">
                   <img
                     src="https://via.placeholder.com/600x400"
                     alt=""
                     className="w-full md:w-1/2"
                   />
                   <div className="space-y-4 md:mr-10 text-center md:text-left">
-                    <h3 className="text-2xl mt-4 font-bold font-serif text-black">
+                    <h3 className="text-2xl mt-6 md:mt-0 font-bold font-serif text-black">
                       Exclusive deals with local businesses
                     </h3>
                     <p>
@@ -137,14 +133,14 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row text-left">
+                <div className="flex flex-col items-center md:flex-row text-left">
                   <img
                     src="https://via.placeholder.com/600x400"
                     alt=""
                     className="w-full md:w-1/2"
                   />
                   <div className="space-y-4 md:ml-10 text-center md:text-left">
-                    <h3 className="text-2xl mt-4 font-bold font-serif text-black">
+                    <h3 className="text-2xl mt-6 md:mt-0 font-bold font-serif text-black">
                       Community meet-ups and events
                     </h3>
                     <p>
@@ -157,14 +153,14 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row-reverse text-left">
+                <div className="flex flex-col items-center md:flex-row-reverse text-left">
                   <img
                     src="https://via.placeholder.com/600x400"
                     alt=""
                     className="w-full md:w-1/2"
                   />
                   <div className="space-y-4 md:mr-10 text-center md:text-left">
-                    <h3 className="text-2xl mt-4 font-bold font-serif text-black">
+                    <h3 className="text-2xl mt-6 md:mt-0 font-bold font-serif text-black">
                       Pizza DAOgh
                     </h3>
                     <p>
@@ -184,16 +180,10 @@ export default function Home() {
                 <h2 className="text-4xl font-bold font-serif my-6 text-black">
                   Our Partners
                 </h2>
-                <p>
-                  Nostrud veniam excepteur irure excepteur consectetur aliquip
-                  ut velit nostrud in dolor magna ad pariatur. Veniam amet
-                  veniam sint fugiat veniam eu dolor ut velit. Culpa est ea
-                  Lorem adipisicing consectetur labore ut tempor. Dolore
-                  pariatur magna minim voluptate tempor cillum laborum qui
-                  tempor. Cillum adipisicing sint velit magna proident voluptate
-                  ullamco ea commodo. Consequat aliquip non anim ex laborum
-                  nulla dolor eiusmod labore adipisicing excepteur et laborum
-                  quis. Dolore ullamco enim deserunt aliquip nulla enim magna.
+                <p className="max-w-2xl mx-auto">
+                  We have a number of local businesses in our partner network
+                  and we're constantly working to expand. Here's a few of those
+                  already onboard!
                 </p>
               </div>
 
