@@ -12,12 +12,14 @@ export default function Home() {
     window.addEventListener(
       'scroll',
       throttle(() => {
-        if (document.documentElement.scrollTop > 670) {
+        const breakpoint = window.outerWidth >= 768 ? 670 : 365
+        console.log(document.documentElement.scrollTop)
+        if (document.documentElement.scrollTop > breakpoint) {
           setNavClasses(
             'bg-white bg-opacity-90 text-black border-b-2 border-gray-100 shadow-sm'
           )
         } else {
-          setNavClasses('')
+          setNavClasses('text-white')
         }
       }, 100)
     )
@@ -39,8 +41,8 @@ export default function Home() {
 
       <nav
         ref={nav}
-        className={`fixed z-20 top-10 w-full text-white transition ${navClasses}`}>
-        <div className="flex justify-center md:justify-start w-full max-w-6xl mx-auto items-center p-4 font-bold text-lg">
+        className={`fixed z-20 top-10 w-full transition ${navClasses}`}>
+        <div className="flex w-full max-w-6xl mx-auto items-center p-4 font-bold text-lg">
           <a href="#" className="flex items-center text-3xl font-serif">
             <Image src="/img/logo.png" width="50" height="50" />
             <span className="ml-2">NHVPC</span>
