@@ -116,7 +116,7 @@ const Nav = () => {
           className="absolute top-11 right-5 text-5xl text-white cursor-pointer"
         />
         <nav className="w-screen h-screen flex items-center justify-center">
-          <ul className="text-white text-center text-4xl">
+          <ul className="text-white text-center text-4xl font-bold">
             <li className="my-12 cursor-pointer">
               <a
                 onClick={(e) => {
@@ -150,7 +150,7 @@ const Nav = () => {
                   e.preventDefault()
                   navigateTo('buy')
                 }}>
-                🍕 Buy a slice
+                Buy a slice
               </a>
             </li>
           </ul>
