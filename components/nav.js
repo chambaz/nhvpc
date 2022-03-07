@@ -48,7 +48,6 @@ const Nav = () => {
         <div className="flex w-full max-w-6xl mx-auto items-center p-4 xl:px-0 font-bold text-lg">
           <a href="#" className="flex items-center text-3xl font-serif">
             <Image src="/img/logo.png" width="50" height="50" />
-            <span className="ml-2">NHVPC</span>
           </a>
 
           <GiHamburgerMenu
@@ -107,7 +106,6 @@ const Nav = () => {
           href="#"
           className="flex items-center text-3xl font-serif absolute top-10 left-5 text-white">
           <Image src="/img/logo.png" width="50" height="50" />
-          <span className="ml-2">NHVPC</span>
         </a>
         <IoClose
           onClick={(e) => {
