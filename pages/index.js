@@ -35,10 +35,10 @@ export default function Home() {
               </h2>
               <p className="max-w-2xl mx-auto">
                 New Haven Pizza Club is a members-only club for residents of New
-                Haven, CT. 4338 unique NFT's will be available to mint for
+                Haven, CT. 4338 unique NFT&apos;s will be available to mint for
                 access to the club. Members will benefit from exclusive deals
                 with our partners, local businesses, and a tight-knit community
-                New Haven's best.
+                New Haven&apos;s best.
               </p>
             </div>
 
@@ -137,8 +137,8 @@ export default function Home() {
                 </h2>
                 <p className="max-w-2xl mx-auto">
                   We have a number of local businesses in our partner network
-                  and we're constantly working to expand. Here's a few of those
-                  already onboard!
+                  and we&apos;re constantly working to expand. Here&apos;s a few
+                  of those already onboard!
                 </p>
               </div>
 
