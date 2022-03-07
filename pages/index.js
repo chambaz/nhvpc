@@ -65,13 +65,12 @@ export default function Home() {
 
       <main>
         <div
-          className="fixed z-0 top-0 w-full bg-cover shadow-inner bg-center"
+          className="fixed z-0 top-0 w-full bg-cover shadow-inner bg-center masthead"
           style={{
             backgroundImage: 'url(/img/masthead.jpg)',
-            height: 750,
           }}></div>
 
-        <div className="bg-white relative z-10 px-4" style={{ marginTop: 750 }}>
+        <div className="bg-white relative z-10 px-4 content">
           <div className="max-w-6xl mx-auto pt-16 leading-loose text-gray-500 text-center">
             <div className="max-w-4xl mx-auto mb-36 space-y-8">
               <h2 className="text-4xl font-bold font-serif my-6 text-black">

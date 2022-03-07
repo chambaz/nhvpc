@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.masthead {
+  height: 400px;
+}
+
+.content {
+  margin-top: 400px;
+}
+
+@media (min-width: 768px) {
+  .masthead {
+    height: 750px;
+  }
+
+  .content {
+    margin-top: 750px;
+  }
+}
