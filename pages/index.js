@@ -1,40 +1,8 @@
-// eslint-disable-line react-hooks/exhaustive-deps
-import { useState, useEffect, useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { throttle } from 'lodash'
+import Nav from '../components/nav'
 
 export default function Home() {
-  const nav = useRef()
-  const [navClasses, setNavClasses] = useState('')
-
-  const navStyle = () => {
-    const breakpoint = window.outerWidth >= 768 ? 670 : 365
-    if (document.documentElement.scrollTop > breakpoint) {
-      setNavClasses(
-        'bg-white bg-opacity-90 text-black border-b-2 border-gray-100 shadow-sm'
-      )
-    } else {
-      setNavClasses('text-white')
-    }
-  }
-
-  const navigateTo = (id) => {
-    const target = document.getElementById(id)
-
-    if (!target) {
-      return
-    }
-
-    const bounds = target.getBoundingClientRect()
-
-    window.scrollTo(0, document.documentElement.scrollTop + bounds.top - 160)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', throttle(navStyle, 100))
-    navStyle()
-  }, [])
   return (
     <div>
       <Head>
@@ -50,55 +18,7 @@ export default function Home() {
         Pizza is in the oven, club opens soon.
       </div>
 
-      <nav
-        ref={nav}
-        className={`fixed z-20 top-10 w-full transition ${navClasses}`}>
-        <div className="flex w-full max-w-6xl mx-auto items-center p-4 lg:px-0 font-bold text-lg">
-          <a href="#" className="flex items-center text-3xl font-serif">
-            <Image src="/img/logo.png" width="50" height="50" />
-            <span className="ml-2">NHVPC</span>
-          </a>
-
-          <ul className="ml-auto hidden lg:flex">
-            <li className="mx-6 cursor-pointer">
-              <a
-                onClick={(e) => {
-                  e.preventDefault()
-                  navigateTo('about')
-                }}>
-                About
-              </a>
-            </li>
-            <li className="mx-6 cursor-pointer">
-              <a
-                onClick={(e) => {
-                  e.preventDefault()
-                  navigateTo('benefits')
-                }}>
-                Benefits
-              </a>
-            </li>
-            <li className="mx-6 cursor-pointer">
-              <a
-                onClick={(e) => {
-                  e.preventDefault()
-                  navigateTo('partners')
-                }}>
-                Partners
-              </a>
-            </li>
-            <li className="mx-6 mr-0 cursor-pointer">
-              <a
-                onClick={(e) => {
-                  e.preventDefault()
-                  navigateTo('buy')
-                }}>
-                🍕 Buy a slice
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <Nav />
 
       <main>
         <div
