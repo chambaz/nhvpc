@@ -10,7 +10,6 @@ export default function Home() {
 
   const navStyle = () => {
     const breakpoint = window.outerWidth >= 768 ? 670 : 365
-    console.log(document.documentElement.scrollTop)
     if (document.documentElement.scrollTop > breakpoint) {
       setNavClasses(
         'bg-white bg-opacity-90 text-black border-b-2 border-gray-100 shadow-sm'
@@ -18,6 +17,18 @@ export default function Home() {
     } else {
       setNavClasses('text-white')
     }
+  }
+
+  const navigateTo = (id) => {
+    const target = document.getElementById(id)
+
+    if (!target) {
+      return
+    }
+
+    const bounds = target.getBoundingClientRect()
+
+    window.scrollTo(0, document.documentElement.scrollTop + bounds.top - 160)
   }
 
   useEffect(() => {
@@ -42,24 +53,48 @@ export default function Home() {
       <nav
         ref={nav}
         className={`fixed z-20 top-10 w-full transition ${navClasses}`}>
-        <div className="flex w-full max-w-6xl mx-auto items-center p-4 md:px-0 font-bold text-lg">
+        <div className="flex w-full max-w-6xl mx-auto items-center p-4 lg:px-0 font-bold text-lg">
           <a href="#" className="flex items-center text-3xl font-serif">
             <Image src="/img/logo.png" width="50" height="50" />
             <span className="ml-2">NHVPC</span>
           </a>
 
-          <ul className="ml-auto hidden md:flex">
-            <li className="mx-6">
-              <a href="#about">About</a>
+          <ul className="ml-auto hidden lg:flex">
+            <li className="mx-6 cursor-pointer">
+              <a
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigateTo('about')
+                }}>
+                About
+              </a>
             </li>
-            <li className="mx-6">
-              <a href="#benefits">Benefits</a>
+            <li className="mx-6 cursor-pointer">
+              <a
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigateTo('benefits')
+                }}>
+                Benefits
+              </a>
             </li>
-            <li className="mx-6">
-              <a href="#partners">Partners</a>
+            <li className="mx-6 cursor-pointer">
+              <a
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigateTo('partners')
+                }}>
+                Partners
+              </a>
             </li>
-            <li className="mx-6 mr-0">
-              <a href="#buyaslice">🍕 Buy a slice</a>
+            <li className="mx-6 mr-0 cursor-pointer">
+              <a
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigateTo('buy')
+                }}>
+                🍕 Buy a slice
+              </a>
             </li>
           </ul>
         </div>
@@ -74,7 +109,7 @@ export default function Home() {
 
         <div className="bg-white relative z-10 px-4 content pb-5">
           <div className="max-w-6xl mx-auto pt-16 leading-loose text-gray-500 text-center">
-            <div className="max-w-4xl mx-auto mb-36 space-y-8">
+            <div id="about" className="max-w-4xl mx-auto mb-36 space-y-8">
               <h2 className="text-4xl font-bold font-serif my-6 text-black">
                 About NHVPC
               </h2>
@@ -87,7 +122,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mb-36 space-y-16">
+            <div id="benefits" className="mb-36 space-y-16">
               <h2 className="text-4xl font-bold font-serif my-6 text-black">
                 Member Benefits
               </h2>
@@ -176,7 +211,7 @@ export default function Home() {
             </div>
 
             <div className="mb-36 space-y-16">
-              <div className="max-w-4xl mx-auto mb-8 space-y-8">
+              <div id="partners" className="max-w-4xl mx-auto mb-8 space-y-8">
                 <h2 className="text-4xl font-bold font-serif my-6 text-black">
                   Our Partners
                 </h2>
@@ -264,7 +299,7 @@ export default function Home() {
             </div>
 
             <div className="mb-36 space-y-16">
-              <div className="max-w-4xl mx-auto mb-8 space-y-8">
+              <div id="buy" className="max-w-4xl mx-auto mb-8 space-y-8">
                 <h2 className="text-4xl font-bold font-serif my-6 text-black">
                   Buy a slice and join the club!
                 </h2>
