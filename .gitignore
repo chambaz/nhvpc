@@ -1,0 +1,10 @@
+# general
+node_modules
+.env
+
+# hardhat
+cache
+artifacts
+
+# next
+.next
