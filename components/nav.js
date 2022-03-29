@@ -90,7 +90,7 @@ const Nav = () => {
             </li>
             <li className="mx-6 mr-0 cursor-pointer">
               <a
-                className="py-3 px-5 bg-indigo-500 text-white rounded-md font-bold"
+                className="py-3 px-5 bg-indigo-500 text-white rounded-md font-bold transition-all hover:bg-indigo-400"
                 onClick={(e) => {
                   e.preventDefault()
                   navigateTo('join')

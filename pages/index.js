@@ -25,11 +25,13 @@ export default function Home() {
             backgroundImage: 'url(/img/masthead.jpg)',
           }}></div>
 
-        <div className="bg-white relative z-10 px-4 content pb-5">
+        <div className="bg-white relative z-10 px-4 content">
           <div className="max-w-6xl mx-auto pt-2 lg:pt-16 leading-loose text-gray-500 text-center">
             <About />
             <Benefits />
             <Partners />
+          </div>
+          <div className="py-2 lg:py-16 lg:pb-20 leading-loose bg-gray-100 text-gray-500 text-center">
             <Join />
           </div>
         </div>

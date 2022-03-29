@@ -3,11 +3,11 @@ const Partners = () => {
     <div id="partners" className="mb-36 space-y-16">
       <div className="max-w-4xl mx-auto mb-8 space-y-8">
         <h2 className="text-4xl font-bold font-serif my-6 text-black">
-          Our Partners
+          Club Partners
         </h2>
         <p className="max-w-2xl mx-auto">
-          We have a number of local businesses in our partner network and
-          we&apos;re constantly working to expand. Here&apos;s a few of those
+          The best New Haven businesses are partnering with NHVPC and we're
+          continuining to expand the partner network. Here&apos;s a few of those
           already onboard!
         </p>
       </div>
@@ -85,6 +85,16 @@ const Partners = () => {
             Coming soon...
           </p>
         </div>
+      </div>
+      <div className="text-black">
+        <p className="my-0 mb-6">
+          Interested in joining NHVPC as a club partner?
+          <br className="hidden md:block" />
+          &nbsp; Drop us a note and we'll follow up with more information.
+        </p>
+        <button className="py-3 px-5 bg-indigo-500 text-white rounded-md font-bold transition-all hover:bg-indigo-400">
+          Become a Partner
+        </button>
       </div>
     </div>
   )
