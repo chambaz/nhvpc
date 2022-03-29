@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Nav from '../components/nav'
+import Masthead from '../components/masthead'
 import About from '../components/about'
 import Benefits from '../components/benefits'
 import Partners from '../components/partners'
@@ -19,21 +20,14 @@ export default function Home() {
       <Nav />
 
       <main>
-        <div
-          className="fixed z-0 top-0 w-full bg-cover shadow-inner bg-center masthead"
-          style={{
-            backgroundImage: 'url(/img/masthead.jpg)',
-          }}></div>
-
+        <Masthead />
         <div className="bg-white relative z-10 px-4 content">
           <div className="max-w-6xl mx-auto pt-2 lg:pt-16 leading-loose text-gray-500 text-center">
             <About />
             <Benefits />
             <Partners />
           </div>
-          <div className="py-2 lg:py-16 lg:pb-20 leading-loose bg-gray-100 text-gray-500 text-center">
-            <Join />
-          </div>
+          <Join />
         </div>
       </main>
 
