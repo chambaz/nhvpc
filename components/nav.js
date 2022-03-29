@@ -91,7 +91,7 @@ const Nav = () => {
               <a
                 onClick={(e) => {
                   e.preventDefault()
-                  navigateTo('buy')
+                  navigateTo('join')
                 }}>
                 🍕 Buy a slice
               </a>
@@ -148,7 +148,7 @@ const Nav = () => {
               <a
                 onClick={(e) => {
                   e.preventDefault()
-                  navigateTo('buy')
+                  navigateTo('join')
                 }}>
                 Buy a slice
               </a>
