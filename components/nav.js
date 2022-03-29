@@ -48,6 +48,7 @@ const Nav = () => {
         <div className="flex w-full max-w-6xl mx-auto items-center p-4 xl:px-0 font-bold text-lg">
           <a href="#" className="flex items-center text-3xl font-serif">
             <Image src="/img/logo.png" width="50" height="50" />
+            <span className="ml-2">NHVPC</span>
           </a>
 
           <GiHamburgerMenu
@@ -65,7 +66,7 @@ const Nav = () => {
                   e.preventDefault()
                   navigateTo('about')
                 }}>
-                About
+                The Club
               </a>
             </li>
             <li className="mx-6 cursor-pointer">
@@ -74,7 +75,7 @@ const Nav = () => {
                   e.preventDefault()
                   navigateTo('benefits')
                 }}>
-                Benefits
+                Member Benefits
               </a>
             </li>
             <li className="mx-6 cursor-pointer">
@@ -83,7 +84,7 @@ const Nav = () => {
                   e.preventDefault()
                   navigateTo('partners')
                 }}>
-                Partners
+                Club Partners
               </a>
             </li>
             <li className="mx-6 mr-0 cursor-pointer">
@@ -104,14 +105,15 @@ const Nav = () => {
         style={{ display: mobileNavActive ? 'block' : 'none' }}>
         <a
           href="#"
-          className="flex items-center text-3xl font-serif absolute top-10 left-5 text-white">
+          className="flex items-center text-3xl font-serif absolute top-14 left-4 text-white font-bold">
           <Image src="/img/logo.png" width="50" height="50" />
+          <span className="ml-2">NHVPC</span>
         </a>
         <IoClose
           onClick={(e) => {
             setMobileNavActive(false)
           }}
-          className="absolute top-11 right-5 text-5xl text-white cursor-pointer"
+          className="absolute top-16 right-3 text-4xl text-white cursor-pointer"
         />
         <nav className="w-screen h-screen flex items-center justify-center">
           <ul className="text-white text-center text-4xl font-bold">
@@ -121,7 +123,7 @@ const Nav = () => {
                   e.preventDefault()
                   navigateTo('about')
                 }}>
-                About
+                The Club
               </a>
             </li>
             <li className="my-12 cursor-pointer">
@@ -130,7 +132,7 @@ const Nav = () => {
                   e.preventDefault()
                   navigateTo('benefits')
                 }}>
-                Benefits
+                Member Benefits
               </a>
             </li>
             <li className="my-12 cursor-pointer">
@@ -139,7 +141,7 @@ const Nav = () => {
                   e.preventDefault()
                   navigateTo('partners')
                 }}>
-                Partners
+                Club Partners
               </a>
             </li>
             <li className="my-12 cursor-pointer">
