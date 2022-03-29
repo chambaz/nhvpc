@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
       <div
-        className="bg-purple-200 fixed z-20 top-0 w-full py-2 text-white text-center font-bold"
+        className="bg-purple-200 fixed z-20 w-full py-2 text-white text-center font-bold banner"
         style={{
           background: 'linear-gradient(135deg, #CB5EEE 0%, #4BE1EC 100%)',
         }}>

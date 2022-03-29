@@ -44,7 +44,7 @@ const Nav = () => {
     <>
       <nav
         ref={nav}
-        className={`fixed z-20 top-10 w-full transition ${navClasses}`}>
+        className={`fixed z-20 top-0 lg:top-10 w-full transition ${navClasses}`}>
         <div className="flex w-full max-w-6xl mx-auto items-center p-4 xl:px-0 font-bold text-lg">
           <a href="#" className="flex items-center text-3xl font-serif">
             <Image src="/img/logo.png" width="50" height="50" />
@@ -56,10 +56,10 @@ const Nav = () => {
               e.preventDefault()
               setMobileNavActive(true)
             }}
-            className="ml-auto text-2xl md:hidden cursor-pointer"
+            className="ml-auto text-2xl lg:hidden cursor-pointer"
           />
 
-          <ul className="ml-auto hidden md:flex">
+          <ul className="ml-auto hidden lg:flex">
             <li className="mx-6 cursor-pointer">
               <a
                 onClick={(e) => {
@@ -105,7 +105,7 @@ const Nav = () => {
         style={{ display: mobileNavActive ? 'block' : 'none' }}>
         <a
           href="#"
-          className="flex items-center text-3xl font-serif absolute top-14 left-4 text-white font-bold">
+          className="flex items-center text-3xl font-serif absolute top-4 left-4 text-white font-bold">
           <Image src="/img/logo.png" width="50" height="50" />
           <span className="ml-2">NHVPC</span>
         </a>
@@ -113,7 +113,7 @@ const Nav = () => {
           onClick={(e) => {
             setMobileNavActive(false)
           }}
-          className="absolute top-16 right-3 text-4xl text-white cursor-pointer"
+          className="absolute top-6 right-3 text-4xl text-white cursor-pointer"
         />
         <nav className="w-screen h-screen flex items-center justify-center">
           <ul className="text-white text-center text-4xl font-bold">
