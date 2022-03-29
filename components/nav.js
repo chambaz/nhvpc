@@ -32,7 +32,10 @@ const Nav = () => {
 
     const bounds = target.getBoundingClientRect()
 
-    window.scrollTo(0, document.documentElement.scrollTop + bounds.top - 160)
+    window.scrollTo({
+      top: document.documentElement.scrollTop + bounds.top - 140,
+      behavior: 'smooth',
+    })
   }
 
   useEffect(() => {
