@@ -3,20 +3,21 @@
 @tailwind utilities;
 
 .banner {
-  top: 430px;
+  top: 480px;
 }
 
 .masthead {
-  height: 440px;
+  height: 480px;
+  border: solid 16px white;
 }
 
 .content {
-  margin-top: 440px;
+  margin-top: 480px;
 }
 
 @media (min-width: 1024px) {
   .banner {
-    top: 0px;
+    top: 750px;
   }
 
   .masthead {

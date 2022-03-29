@@ -11,7 +11,7 @@ const Nav = () => {
   const [mobileNavActive, setMobileNavActive] = useState(false)
 
   const navStyle = () => {
-    const breakpoint = window.outerWidth >= 768 ? 630 : 325
+    const breakpoint = window.outerWidth >= 768 ? 670 : 325
     if (document.documentElement.scrollTop > breakpoint) {
       setNavClasses(
         'bg-white bg-opacity-90 text-black border-b-2 border-gray-100 shadow-sm'
@@ -44,7 +44,8 @@ const Nav = () => {
     <>
       <nav
         ref={nav}
-        className={`fixed z-20 top-0 lg:top-10 w-full transition ${navClasses}`}>
+        className={`fixed z-20 top-6 transition ${navClasses}`}
+        style={{ margin: '0 16px', width: 'calc(100% - 32px)' }}>
         <div className="flex w-full max-w-6xl mx-auto items-center p-4 xl:px-0 font-bold text-lg">
           <a href="#" className="flex items-center text-3xl font-serif">
             <Image src="/img/logo.png" width="50" height="50" />
@@ -89,11 +90,12 @@ const Nav = () => {
             </li>
             <li className="mx-6 mr-0 cursor-pointer">
               <a
+                className="py-3 px-5 bg-indigo-500 text-white rounded-md font-bold"
                 onClick={(e) => {
                   e.preventDefault()
                   navigateTo('join')
                 }}>
-                🍕 Buy a slice
+                <span className="mr-1">🍕</span> Buy a slice
               </a>
             </li>
           </ul>
@@ -105,7 +107,7 @@ const Nav = () => {
         style={{ display: mobileNavActive ? 'block' : 'none' }}>
         <a
           href="#"
-          className="flex items-center text-3xl font-serif absolute top-4 left-4 text-white font-bold">
+          className="flex items-center text-3xl font-serif absolute top-10 left-8 text-white font-bold">
           <Image src="/img/logo.png" width="50" height="50" />
           <span className="ml-2">NHVPC</span>
         </a>
@@ -113,7 +115,7 @@ const Nav = () => {
           onClick={(e) => {
             setMobileNavActive(false)
           }}
-          className="absolute top-6 right-3 text-4xl text-white cursor-pointer"
+          className="absolute top-12 right-6 text-4xl text-white cursor-pointer"
         />
         <nav className="w-screen h-screen flex items-center justify-center">
           <ul className="text-white text-center text-4xl font-bold">

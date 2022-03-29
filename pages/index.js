@@ -14,13 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div
-        className="bg-purple-200 fixed z-20 w-full py-2 text-white text-center font-bold banner"
-        style={{
-          background: 'linear-gradient(135deg, #CB5EEE 0%, #4BE1EC 100%)',
-        }}>
-        Pizza is in the oven, club opens soon.
-      </div>
+      {/* <div className="bg-gradient-to-r from-fuchsia-500 to-indigo-500 absolute z-20 w-full py-1 text-white text-center font-bold banner"></div> */}
 
       <Nav />
 
@@ -32,7 +26,7 @@ export default function Home() {
           }}></div>
 
         <div className="bg-white relative z-10 px-4 content pb-5">
-          <div className="max-w-6xl mx-auto pt-16 leading-loose text-gray-500 text-center">
+          <div className="max-w-6xl mx-auto pt-2 lg:pt-16 leading-loose text-gray-500 text-center">
             <About />
             <Benefits />
             <Partners />
