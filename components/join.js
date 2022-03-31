@@ -3,7 +3,7 @@ import { Oval } from 'react-loader-spinner'
 import { AiOutlineCheck } from 'react-icons/ai'
 
 const Join = () => {
-  const [signupState, setSignupState] = useState('sent')
+  const [signupState, setSignupState] = useState('default')
 
   return (
     <div
@@ -33,7 +33,17 @@ const Join = () => {
                 placeholder="Email address..."
                 className="max-w-lg py-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 lg:border-r-0 rounded-md lg:rounded-r-none"
               />
-              <button className="text-sm mt-2 lg:mt-0 w-full lg:w-auto block py-4 px-4 bg-indigo-500 border border-indigo-500 text-white rounded-md lg:rounded-l-none font-bold transition-all hover:bg-indigo-400">
+              <button
+                onClick={() => {
+                  setSignupState('sending')
+                  setTimeout(() => {
+                    setSignupState('sent')
+                    setTimeout(() => {
+                      setSignupState('default')
+                    }, 2000)
+                  }, 1000)
+                }}
+                className="text-sm mt-2 lg:mt-0 w-full lg:w-auto block py-4 px-4 bg-indigo-500 border border-indigo-500 text-white rounded-md lg:rounded-l-none font-bold transition-all hover:bg-indigo-400">
                 Sign Up
               </button>
             </div>
