@@ -1,8 +1,11 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
+import { Oval } from 'react-loader-spinner'
+import { AiOutlineCheck } from 'react-icons/ai'
 
 const Partners = () => {
   const [modalOpen, setModalOpen] = useState(false)
+  const [formState, setFormState] = useState('default')
 
   return (
     <>
@@ -22,8 +25,6 @@ const Partners = () => {
               leaveTo="opacity-0">
               <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
             </Transition.Child>
-
-            {/* This element is to trick the browser into centering the modal contents. */}
             <span
               className="hidden sm:inline-block sm:align-middle sm:h-screen"
               aria-hidden="true">
@@ -38,98 +39,148 @@ const Partners = () => {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
               <div className="relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full sm:pt-1">
-                <div className="text-center sm:mt-16">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-4xl mt-6 md:mt-0 font-bold text-gray-900">
-                    Become a NHVPC Partner
-                  </Dialog.Title>
-                  <div className="mt-6">
-                    <p className="text-gray-500">
-                      Great choice! Drop us a note and we'll be in touch about
-                      becoming a NHVPC partner.
-                    </p>
-                  </div>
-                </div>
-                <div className="space-y-6 sm:space-y-5 max-w-xl mx-auto mb-16 mt-10">
-                  <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
-                    <label
-                      htmlFor="first-name"
-                      className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                      Name
-                    </label>
-                    <div className="mt-1 sm:mt-0 sm:col-span-2">
-                      <input
-                        type="text"
-                        name="first-name"
-                        id="first-name"
-                        autoComplete="given-name"
-                        className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
-                      />
+                {formState === 'default' && (
+                  <>
+                    <div className="text-center sm:mt-16">
+                      <Dialog.Title
+                        as="h3"
+                        className="text-4xl mt-6 md:mt-0 font-bold text-gray-900">
+                        Become a NHVPC Partner
+                      </Dialog.Title>
+                      <div className="mt-6">
+                        <p className="text-gray-500">
+                          Great choice! Drop us a note and we'll be in touch
+                          about becoming a NHVPC partner.
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                    <div className="space-y-6 sm:space-y-5 max-w-xl mx-auto mb-16 mt-10">
+                      <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
+                        <label
+                          htmlFor="first-name"
+                          className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                          Name
+                        </label>
+                        <div className="mt-1 sm:mt-0 sm:col-span-2">
+                          <input
+                            type="text"
+                            name="first-name"
+                            id="first-name"
+                            autoComplete="given-name"
+                            className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+                          />
+                        </div>
+                      </div>
 
-                  <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                    <label
-                      htmlFor="last-name"
-                      className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                      Company
-                    </label>
-                    <div className="mt-1 sm:mt-0 sm:col-span-2">
-                      <input
-                        type="text"
-                        name="last-name"
-                        id="last-name"
-                        autoComplete="family-name"
-                        className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-                  </div>
+                      <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                        <label
+                          htmlFor="last-name"
+                          className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                          Company
+                        </label>
+                        <div className="mt-1 sm:mt-0 sm:col-span-2">
+                          <input
+                            type="text"
+                            name="last-name"
+                            id="last-name"
+                            autoComplete="family-name"
+                            className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+                          />
+                        </div>
+                      </div>
 
-                  <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                      Email
-                    </label>
-                    <div className="mt-1 sm:mt-0 sm:col-span-2">
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        autoComplete="email"
-                        className="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-                  </div>
+                      <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                        <label
+                          htmlFor="email"
+                          className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                          Email
+                        </label>
+                        <div className="mt-1 sm:mt-0 sm:col-span-2">
+                          <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autoComplete="email"
+                            className="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+                          />
+                        </div>
+                      </div>
 
-                  <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                    <label
-                      htmlFor="about"
-                      className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                      Message
-                    </label>
-                    <div className="mt-1 sm:mt-0 sm:col-span-2">
-                      <textarea
-                        id="about"
-                        name="about"
-                        rows={3}
-                        className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
-                        defaultValue={''}
+                      <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                        <label
+                          htmlFor="about"
+                          className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                          Message
+                        </label>
+                        <div className="mt-1 sm:mt-0 sm:col-span-2">
+                          <textarea
+                            id="about"
+                            name="about"
+                            rows={3}
+                            className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
+                            defaultValue={''}
+                          />
+                          <p className="mt-2 text-sm text-gray-500">
+                            Drop us a note.
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <button
+                          onClick={() => {
+                            setFormState('sending')
+                            setTimeout(() => {
+                              setFormState('success')
+
+                              setTimeout(() => {
+                                setModalOpen(false)
+                                setTimeout(() => setFormState('default'), 1000)
+                              }, 2000)
+                            }, 2000)
+                          }}
+                          className="mx-auto block mt-16 py-3 px-8 bg-indigo-500 text-white rounded-md font-bold transition-all hover:bg-indigo-400">
+                          Send Message
+                        </button>
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {formState === 'sending' && (
+                  <div className="text-center sm:mt-16">
+                    <Dialog.Title
+                      as="h3"
+                      className="text-4xl mt-6 md:mt-0 font-bold text-gray-900">
+                      Sending message...
+                    </Dialog.Title>
+                    <div className="mt-12 mb-20 flex justify-center">
+                      <Oval
+                        ariaLabel="loading-indicator"
+                        height={100}
+                        width={100}
+                        strokeWidth={2}
+                        strokeWidthSecondary={1}
+                        color="blue"
+                        secondaryColor="#eee"
                       />
-                      <p className="mt-2 text-sm text-gray-500">
-                        Drop us a note.
-                      </p>
                     </div>
                   </div>
-                  <div>
-                    <button
-                      onClick={() => setModalOpen(false)}
-                      className="mx-auto block mt-16 py-3 px-8 bg-indigo-500 text-white rounded-md font-bold transition-all hover:bg-indigo-400">
-                      Send Message
-                    </button>
+                )}
+
+                {formState === 'success' && (
+                  <div className="text-center sm:mt-16">
+                    <Dialog.Title
+                      as="h3"
+                      className="text-4xl mt-6 md:mt-0 font-bold text-gray-900">
+                      Thanks for the note, we'll be in touch asap.
+                    </Dialog.Title>
+                    <div className="mt-12 mb-20 flex justify-center">
+                      <div className="mx-auto flex items-center justify-center p-8 rounded-full bg-green-100">
+                        <AiOutlineCheck className="text-5xl text-green-600" />
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </Transition.Child>
           </div>
