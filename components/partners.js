@@ -4,7 +4,7 @@ import { Oval } from 'react-loader-spinner'
 import { AiOutlineCheck } from 'react-icons/ai'
 
 const Partners = () => {
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState(true)
   const [formState, setFormState] = useState('default')
 
   return (
@@ -14,7 +14,7 @@ const Partners = () => {
           as="div"
           className="fixed z-20 inset-0 overflow-y-auto"
           onClose={setModalOpen}>
-          <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+          <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -44,7 +44,7 @@ const Partners = () => {
                     <div className="text-center sm:mt-16">
                       <Dialog.Title
                         as="h3"
-                        className="text-4xl mt-6 md:mt-0 font-bold text-gray-900">
+                        className="text-3xl lg:text-4xl px-4 lg:px-0 mt-6 md:mt-0 font-bold text-gray-900">
                         Become a NHVPC Partner
                       </Dialog.Title>
                       <div className="mt-6">
@@ -150,7 +150,7 @@ const Partners = () => {
                   <div className="text-center sm:mt-16">
                     <Dialog.Title
                       as="h3"
-                      className="text-4xl mt-6 md:mt-0 font-bold text-gray-900">
+                      className="text-3xl lg:text-4xl px-4 lg:px-0 mt-6 md:mt-0 font-bold text-gray-900">
                       Sending message...
                     </Dialog.Title>
                     <div className="mt-12 mb-20 flex justify-center">
@@ -171,7 +171,7 @@ const Partners = () => {
                   <div className="text-center sm:mt-16">
                     <Dialog.Title
                       as="h3"
-                      className="text-4xl mt-6 md:mt-0 font-bold text-gray-900">
+                      className="text-3xl lg:text-4xl px-4 lg:px-0 mt-6 md:mt-0 font-bold text-gray-900">
                       Thanks for the note, we&apos;ll be in touch asap.
                     </Dialog.Title>
                     <div className="mt-12 mb-20 flex justify-center">
@@ -244,7 +244,7 @@ const Partners = () => {
               Coming soon...
             </p>
           </div>
-          <div className="m-8 opacity-50">
+          <div className="m-8 opacity-50 hidden lg:block">
             <img
               src="https://via.placeholder.com/200x200"
               className="rounded-full"
@@ -253,7 +253,7 @@ const Partners = () => {
               Coming soon...
             </p>
           </div>
-          <div className="m-8 opacity-50">
+          <div className="m-8 opacity-50 hidden lg:block">
             <img
               src="https://via.placeholder.com/200x200"
               className="rounded-full"
@@ -262,7 +262,7 @@ const Partners = () => {
               Coming soon...
             </p>
           </div>
-          <div className="m-8 opacity-50">
+          <div className="m-8 opacity-50 hidden lg:block">
             <img
               src="https://via.placeholder.com/200x200"
               className="rounded-full"
