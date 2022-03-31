@@ -156,8 +156,8 @@ const Partners = () => {
                     <div className="mt-12 mb-20 flex justify-center">
                       <Oval
                         ariaLabel="loading-indicator"
-                        height={100}
-                        width={100}
+                        height={75}
+                        width={75}
                         strokeWidth={2}
                         strokeWidthSecondary={1}
                         color="blue"
@@ -175,8 +175,8 @@ const Partners = () => {
                       Thanks for the note, we'll be in touch asap.
                     </Dialog.Title>
                     <div className="mt-12 mb-20 flex justify-center">
-                      <div className="mx-auto flex items-center justify-center p-8 rounded-full bg-green-100">
-                        <AiOutlineCheck className="text-5xl text-green-600" />
+                      <div className="mx-auto flex items-center justify-center p-6 rounded-full bg-green-100">
+                        <AiOutlineCheck className="text-4xl text-green-600" />
                       </div>
                     </div>
                   </div>
