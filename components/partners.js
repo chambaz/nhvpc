@@ -49,8 +49,8 @@ const Partners = () => {
                       </Dialog.Title>
                       <div className="mt-6">
                         <p className="text-gray-500">
-                          Great choice! Drop us a note and we'll be in touch
-                          about becoming a NHVPC partner.
+                          Great choice! Drop us a note and we&apos;ll be in
+                          touch about becoming a NHVPC partner.
                         </p>
                       </div>
                     </div>
@@ -172,7 +172,7 @@ const Partners = () => {
                     <Dialog.Title
                       as="h3"
                       className="text-4xl mt-6 md:mt-0 font-bold text-gray-900">
-                      Thanks for the note, we'll be in touch asap.
+                      Thanks for the note, we&apos;ll be in touch asap.
                     </Dialog.Title>
                     <div className="mt-12 mb-20 flex justify-center">
                       <div className="mx-auto flex items-center justify-center p-6 rounded-full bg-green-100">
@@ -192,9 +192,9 @@ const Partners = () => {
             Club Partners
           </h2>
           <p className="max-w-2xl mx-auto">
-            The best New Haven businesses are partnering with NHVPC and we're
-            continuining to expand the partner network. Here&apos;s a few of
-            those already onboard!
+            The best New Haven businesses are partnering with NHVPC and
+            we&apos;re continuining to expand the partner network. Here&apos;s a
+            few of those already onboard!
           </p>
         </div>
 
@@ -276,7 +276,8 @@ const Partners = () => {
           <p className="my-0 mb-6">
             Interested in joining NHVPC as a club partner?
             <br className="hidden md:block" />
-            &nbsp; Drop us a note and we'll follow up with more information.
+            &nbsp; Drop us a note and we&apos;ll follow up with more
+            information.
           </p>
           <button
             onClick={() => setModalOpen(true)}
