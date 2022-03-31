@@ -33,7 +33,7 @@ const Benefits = () => {
               Exclusive deals with local businesses
             </h3>
             <p>
-              The NHVPC is a network of New Haven's finest. From legendary
+              The NHVPC is a network of New Haven&pos;s finest. From legendary
               restaurants to the best evening spots, NHVPC members will gain
               access to exclusive deals and special offers.
             </p>
