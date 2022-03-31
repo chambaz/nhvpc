@@ -10,13 +10,14 @@ const Benefits = () => {
           <img src="/img/sample.jpg" alt="" className="w-full md:w-1/2" />
           <div className="space-y-4 md:ml-10 text-center md:text-left">
             <h3 className="text-2xl mt-6 md:mt-0 font-bold font-serif text-black">
-              Mint 4338 unique NFTs
+              4338 unique NFTs
             </h3>
             <p>
-              Officia in minim pariatur ea officia velit et reprehenderit
-              laborum. Deserunt sit duis aliqua incididunt proident proident
-              proident do do labore. Voluptate reprehenderit in ea minim
-              voluptate cupidatat non officia mollit aute minim Lorem veniam.
+              The New Haven Pizza Club NFT collection will be made up of 4338
+              unique NFTs. Owning an NHVPC NFT will grant you access to the club
+              and benefit from the utility and growth of the project. Afer the
+              initial mint, the NFTs will be available for trading on secondary
+              markets.
             </p>
           </div>
         </div>
@@ -32,10 +33,9 @@ const Benefits = () => {
               Exclusive deals with local businesses
             </h3>
             <p>
-              Officia in minim pariatur ea officia velit et reprehenderit
-              laborum. Deserunt sit duis aliqua incididunt proident proident
-              proident do do labore. Voluptate reprehenderit in ea minim
-              voluptate cupidatat non officia mollit aute minim Lorem veniam.
+              The NHVPC is a network of New Haven's finest. From legendary
+              restaurants to the best evening spots, NHVPC members will gain
+              access to exclusive deals and special offers.
             </p>
           </div>
         </div>
@@ -51,10 +51,9 @@ const Benefits = () => {
               Community meet-ups and events
             </h3>
             <p>
-              Officia in minim pariatur ea officia velit et reprehenderit
-              laborum. Deserunt sit duis aliqua incididunt proident proident
-              proident do do labore. Voluptate reprehenderit in ea minim
-              voluptate cupidatat non officia mollit aute minim Lorem veniam.
+              Sponsored events, parties, meetups, and networking. Virtual and
+              in-person. The NHVPC is a strong and vibrant community that
+              believes in growth and success of the group and the city culture.
             </p>
           </div>
         </div>
@@ -70,10 +69,10 @@ const Benefits = () => {
               Pizza DAOgh
             </h3>
             <p>
-              Officia in minim pariatur ea officia velit et reprehenderit
-              laborum. Deserunt sit duis aliqua incididunt proident proident
-              proident do do labore. Voluptate reprehenderit in ea minim
-              voluptate cupidatat non officia mollit aute minim Lorem veniam.
+              NHVPC is a community driven and community led organization.
+              Membership does not only grant you access to our benefits, you
+              also have a say. Club members will be given the chance to vote on
+              all major decisions and help to shape the direction of the club.
             </p>
           </div>
         </div>

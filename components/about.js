@@ -8,7 +8,7 @@ const About = () => {
         New Haven Pizza Club is a members-only club for residents of New Haven,
         CT. 4338 unique NFT&apos;s will be available to mint for access to the
         club. Members will benefit from exclusive deals with our partners, local
-        businesses, and a tight-knit community New Haven&apos;s best.
+        businesses, and a tight-knit community of New Haven&apos;s finest.
       </p>
     </div>
   )
