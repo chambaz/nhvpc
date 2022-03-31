@@ -1,10 +1,6 @@
-import { useState } from 'react'
-import { Oval } from 'react-loader-spinner'
-import { AiOutlineCheck } from 'react-icons/ai'
+import MailingList from './mailinglist'
 
 const Join = () => {
-  const [signupState, setSignupState] = useState('default')
-
   return (
     <div
       id="join"
@@ -16,69 +12,10 @@ const Join = () => {
         <h2 className="text-4xl font-bold font-serif my-6 text-black">
           Coming to New Haven soon...
         </h2>
-        <p className="text-6xl lg:text-8xl font-serif mb-5 bg-clip-text text-gray-400 font-light">
+        <p className="text-6xl lg:text-8xl font-serif mb-8 lg:mb-16 bg-clip-text text-gray-400 font-light">
           5/1/2022
         </p>
-        {signupState === 'default' && (
-          <>
-            <h3 className="mt-8 lg:mt-16 mb-4">
-              Join the mailing list and stay up to date with NHVPC
-            </h3>
-            <div className="flex flex-col lg:flex-row justify-center items-center">
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                autoComplete="given-name"
-                placeholder="Email address..."
-                className="max-w-lg py-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 lg:border-r-0 rounded-md lg:rounded-r-none"
-              />
-              <button
-                onClick={() => {
-                  setSignupState('sending')
-                  setTimeout(() => {
-                    setSignupState('sent')
-                    setTimeout(() => {
-                      setSignupState('default')
-                    }, 2000)
-                  }, 1000)
-                }}
-                className="text-sm mt-2 lg:mt-0 w-full lg:w-auto block py-4 px-4 bg-indigo-500 border border-indigo-500 text-white rounded-md lg:rounded-l-none font-bold transition-all hover:bg-indigo-400">
-                Sign Up
-              </button>
-            </div>
-          </>
-        )}
-
-        {signupState === 'sending' && (
-          <>
-            <h3 className="mt-8 lg:mt-16 mb-4">Joining the mailing list...</h3>
-            <div className="flex flex-col lg:flex-row justify-center items-center">
-              <Oval
-                ariaLabel="loading-indicator"
-                height={45}
-                width={45}
-                strokeWidth={2}
-                strokeWidthSecondary={1}
-                color="blue"
-                secondaryColor="#eee"
-              />
-            </div>
-          </>
-        )}
-
-        {signupState === 'sent' && (
-          <>
-            <h3 className="mt-8 lg:mt-16 mb-4">
-              You are on the list! Check your email for comfirmation.
-            </h3>
-            <div className="flex flex-col lg:flex-row justify-center items-center">
-              <div className="mx-auto flex items-center justify-center p-4 rounded-full bg-green-100">
-                <AiOutlineCheck className="text-2xl text-green-600" />
-              </div>
-            </div>
-          </>
-        )}
+        <MailingList heading="Join the mailing list and stay up to date with NHVPC" />
       </div>
     </div>
   )
