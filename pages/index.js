@@ -31,7 +31,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="w-full py-6 px-4 border-t-2 border-gray-100 text-xs">
+      <footer className="w-full py-6 px-4 text-xs">
         <div className="flex max-w-6xl mx-auto">
           <p className="font-bold mr-auto flex items-center">
             <Image src="/img/logo.png" width="20" height="20" />
