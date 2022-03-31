@@ -4,7 +4,7 @@ import { Oval } from 'react-loader-spinner'
 import { AiOutlineCheck } from 'react-icons/ai'
 
 const Partners = () => {
-  const [modalOpen, setModalOpen] = useState(true)
+  const [modalOpen, setModalOpen] = useState(false)
   const [formState, setFormState] = useState('default')
 
   return (
